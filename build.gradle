@@ -1,0 +1,25 @@
+buildscript {
+    ext {
+        vPlayServices = '20.0.0'
+        vRoom = '2.4.2'
+        vHilt = '2.43'
+        vRetrofit = '2.9.0'
+        vRetrofitLogInterceptor = '5.0.0-alpha.3'
+        vCoroutines = '1.6.0-native-mt'
+    }
+    dependencies {
+        classpath "com.google.gms:google-services:4.3.13"
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$vHilt"
+    }
+}
+
+plugins {
+    id 'com.android.application' version '7.2.2' apply false
+    id 'com.android.library' version '7.2.2' apply false
+    id 'org.jetbrains.kotlin.android' version '1.7.10' apply false
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
