@@ -1,4 +1,3 @@
 # Technicaltest
-# App
-![APP](https://photos.app.goo.gl/e8ugthzbe4cSJP3r5)
-# Firebase
+# Screenshots
+[APP](https://drive.google.com/drive/folders/1c_tJ7TB3NSVrcR5T9iGTqpUsPo04-StK?usp=sharing)
