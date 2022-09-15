@@ -15,7 +15,6 @@ class GalleryAdapter(private var mList: List<String>) : RecyclerView.Adapter<Gal
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         val vBind = ItemGalleryBinding.bind(itemView)
     }
-    // create new views
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         // inflates the card_view_design view
         // that is used to hold list item

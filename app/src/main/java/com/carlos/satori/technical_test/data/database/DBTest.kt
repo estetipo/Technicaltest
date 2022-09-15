@@ -15,6 +15,8 @@ import com.carlos.satori.technical_test.data.model.movies.Dates
 import com.carlos.satori.technical_test.data.model.movies.Movies
 import com.carlos.satori.technical_test.data.model.movies.Results
 
+
+//Determine wich classes are going to be entities
 @Database(
     entities = [Images::class, Location::class,Results::class],
     version = 1
@@ -22,6 +24,7 @@ import com.carlos.satori.technical_test.data.model.movies.Results
 @TypeConverters(DBTypeConverters::class)
 abstract class DBTest : RoomDatabase() {
 
+    //list of our daos
     abstract fun imagesDao(): ImagesDao
     abstract fun locationDao(): LocationDao
     abstract fun moviesDao(): MoviesDao

@@ -7,6 +7,7 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface ImagesDao {
+    //Dao for the images
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun upsert(image: Images): Long
 

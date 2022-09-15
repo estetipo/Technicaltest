@@ -10,6 +10,7 @@ class FirebaseStorage {
     private val database = Firebase.storage
     private val storageRef = database.getReference("images")
 
+    //Methods to fetch and save images
     suspend fun getImages(): List<String> {
         val list = mutableListOf<String>()
         storageRef.listAll().addOnSuccessListener{ result->

@@ -9,7 +9,7 @@ import com.google.firebase.ktx.Firebase
 class FirebaseSetup {
 
     private var db = Firebase.firestore
-
+    //Needed initial setup to access firebase
     fun initInstance() {
         val settings = firestoreSettings {
             isPersistenceEnabled = true

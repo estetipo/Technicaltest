@@ -7,6 +7,7 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface MoviesDao {
+    //Dao for the movies
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun upsert(results: Results): Long
 

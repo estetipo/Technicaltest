@@ -8,6 +8,7 @@ import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
 class App :Application(){
+    //Initialize app as hiltandroidapp to set up dagger
     companion object {
         lateinit var firebaseInstance: FirebaseSetup
     }

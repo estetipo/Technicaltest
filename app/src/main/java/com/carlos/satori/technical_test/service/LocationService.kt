@@ -38,6 +38,7 @@ class LocationService:Service() {
     private lateinit var mHandler: Handler
     private lateinit var mRunnable: Runnable
 
+    //Service declare as singleton to avoid overlaping
     companion object {
         var isRunning = false
     }
@@ -52,7 +53,7 @@ class LocationService:Service() {
         mHandler = Handler()
         mRunnable = Runnable { startLocation(this) }
         mHandler.postDelayed(mRunnable, 5000)
-
+        //Notification channel if using android  or higher
         val channelId =
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 createNotificationChannel("my_service", "My Background Service")
@@ -96,6 +97,7 @@ class LocationService:Service() {
                 priority = LocationRequest.PRIORITY_HIGH_ACCURACY
             }
 
+            //We use a brodcaster to send the info
             locationCallbackVar = object : LocationCallback() {
                 override fun onLocationResult(p0: LocationResult) {
                     super.onLocationResult(p0)

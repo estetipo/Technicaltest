@@ -17,7 +17,6 @@ class MoviesAdapter(private var mList: List<Results>) : RecyclerView.Adapter<Mov
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         val vBind = ItemMovieBinding.bind(itemView)
     }
-    // create new views
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         // inflates the card_view_design view
         // that is used to hold list item

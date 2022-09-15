@@ -7,6 +7,7 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface LocationDao {
+    //Dao for the locations
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun upsert(location: Location): Long
 

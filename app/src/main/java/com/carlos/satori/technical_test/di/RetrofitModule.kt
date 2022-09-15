@@ -24,6 +24,7 @@ import java.util.concurrent.TimeUnit
 @Module
 @InstallIn(SingletonComponent::class)
 class RetrofitModule {
+    //Retrofit configuration
     @Provides
     fun provideRetrofit(): ApiService {
         if(Token.retrofitInstance == null){
@@ -45,6 +46,7 @@ class RetrofitModule {
 
     }
 
+    //The api is set as a query unlike other kinds
     private fun provideHttpClient(): OkHttpClient {
         return OkHttpClient
             .Builder()

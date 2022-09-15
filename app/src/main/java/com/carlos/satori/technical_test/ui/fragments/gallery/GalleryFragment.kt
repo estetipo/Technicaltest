@@ -69,6 +69,7 @@ class GalleryFragment : Fragment() {
 
 
     private fun setupImagePicker() {
+        //Checks permissions and requests them if not available
         if (ContextCompat.checkSelfPermission(
                 requireContext(),
                 Manifest.permission.READ_EXTERNAL_STORAGE
@@ -104,6 +105,7 @@ class GalleryFragment : Fragment() {
     }
 
     private fun register(): ImagePickerLauncher {
+        // Function from library that simplifies activityforresult
         return registerImagePicker { images ->
             images.forEach { image ->
                     gallery.add(image.uri.toString())
@@ -129,6 +131,7 @@ class GalleryFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         binding.imageRecycler.layoutManager = StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL)
         binding.imageRecycler.adapter = GalleryAdapter(gallery)
+        //Adds the items to the recycler
         viewModel.listImages.observe(viewLifecycleOwner){
             gallery.clear()
             it.forEach { index->

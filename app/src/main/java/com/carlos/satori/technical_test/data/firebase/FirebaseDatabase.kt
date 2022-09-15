@@ -5,6 +5,7 @@ import com.carlos.satori.technical_test.App.Companion.firebaseInstance
 import com.carlos.satori.technical_test.data.model.Location
 
 class FirebaseDatabase {
+    //Method to add a locatoin to the firebase storage
     fun addLocation(location: Location, onSuccess: () -> Unit, onFailiure: (String) -> Unit) {
         firebaseInstance.getDb().collection("locations")
             .add(location)
@@ -16,6 +17,7 @@ class FirebaseDatabase {
             }
     }
 
+    //Method to fetch the locations from firebase
     fun getLocations(onSuccess : (List<Location>) -> Unit, onFailiure: (String) -> Unit) {
         firebaseInstance.getDb().collection("locations")
             .get()
