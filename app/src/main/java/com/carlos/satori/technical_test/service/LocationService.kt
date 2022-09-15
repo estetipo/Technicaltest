@@ -93,7 +93,7 @@ class LocationService:Service() {
 
             var locationRequestVar: LocationRequest = LocationRequest.create().apply {
                 interval = 30000
-                fastestInterval = 30000
+                fastestInterval = 300000
                 priority = LocationRequest.PRIORITY_HIGH_ACCURACY
             }
 
